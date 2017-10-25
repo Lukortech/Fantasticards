@@ -9,13 +9,13 @@ if (isset($_SESSION['userSession'])!="") {
 
 if (isset($_POST['btn-login'])) {
 	
-	$email = strip_tags($_POST['email']);
+	$username = strip_tags($_POST['username']);
 	$password = strip_tags($_POST['password']);
 	
-	$email = $DBcon->real_escape_string($email);
+	$username = $DBcon->real_escape_string($username);
 	$password = $DBcon->real_escape_string($password);
 	
-	$query = $DBcon->query("SELECT user_id, email, password FROM tbl_users WHERE email='$email'");
+	$query = $DBcon->query("SELECT user_id, username, password FROM tbl_users WHERE username='$username'");
 	$row=$query->fetch_array();
 	
 	$count = $query->num_rows; // if email/password are correct returns must be 1 row
