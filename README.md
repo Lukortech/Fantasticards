@@ -17,9 +17,5 @@ For now, the plan is to get along with some basic front and back-end .
 
 3. Nothing to see here yet.
 
-<<<<<<< HEAD
 
 ## If you're intrested in how the page looks like at the moment you should totally check [this](http://fantasticards.pl/) out.
-=======
-If you're intrested in how the page looks like at the moment you should totally check [this](https://pages.github.com/) out.
->>>>>>> 240aa4623463a9229e2e276f184eb3cbfed3fc68
