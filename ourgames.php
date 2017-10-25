@@ -33,6 +33,16 @@ if (isset($_POST['btn-login'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pl">
+<!--canvas-->
+<style>
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer; 
+}
+</style>
+<!--canvas-->
 <!--style do bootsnipa-->
 <style>
 .timeline {
@@ -220,24 +230,6 @@ if (isset($_POST['btn-login'])) {
 }
 </style>
 <!--style do bootsnipa-->
-<!--gradient-->
-<style>
-.gradient {
-  max-width: 1920px;  
-  background-image: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 85% );
-  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 75% );
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 95% );
-  padding-top: 10 px;
-}
- 
-img {
-  max-width: 100%;
-  position: relative;
-  z-index: -1;
-}
-</style>
-<!--gradient-->
-
 <head>
   <title>FantastiCards</title>
   <meta charset="utf-8">
@@ -250,6 +242,8 @@ img {
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+	<script src="/canvas.js"</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js"</script>
 	<!--login-->
 </head>
 <body style="padding: 0px 0px 0px 0px;">
@@ -338,23 +332,8 @@ img {
  <!--Mainpic/end-->
  <!--body/start-->
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Witamy na naszej stronie!</h3>
-      <p>Zapraszamy do zainteresowania się naszymi grami. </p>
-      <p>Na obecną chwilę pracujemy nad grą karcianą osadzoną w realiach fantasy i clickerem który ma zapewnić rozrywkę podczas nudy na szkolnej przerwie. </p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
+  <canvas id="c"></canvas>
+  kurwa chuj
 </div>
  <!--body/end-->
 
