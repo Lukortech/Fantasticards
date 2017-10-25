@@ -33,6 +33,16 @@ if (isset($_POST['btn-login'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pl">
+<!--canvas-->
+<style>
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer; 
+}
+</style>
+<!--canvas-->
 <!--style do bootsnipa-->
 <style>
 .timeline {
@@ -232,6 +242,8 @@ if (isset($_POST['btn-login'])) {
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+	<script src="/canvas.js"</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js"</script>
 	<!--login-->
 </head>
 <body style="padding: 0px 0px 0px 0px;">
@@ -251,7 +263,7 @@ if (isset($_POST['btn-login'])) {
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-2">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Nasze gry</a></li>
+            <li><a href="/ourgames.php">Nasze gry</a></li>
             <li><a href="#">Galeria</a></li>
             <li><a href="/patch.php">Patch-news</a></li>
             <li><a href="/contact.php">Kontakt</a></li>
@@ -320,68 +332,8 @@ if (isset($_POST['btn-login'])) {
  <!--Mainpic/end-->
  <!--body/start-->
 <div class="container">
-	<div class="container">
-    <div class="page-header">
-        <h4 id="timeline">Słowem wstepu projekt ten jest Tworzony przez Osoby pragnace nauczyc sie programowac, zwiazku z tym licz sie z mozliwosciami wystepowania bledow, nie zajmujemy sie tym 24 na dobe jest to nasze hobby, przez co zmiany beda sie pojawiac w róznych terminach, nie powinny dziwic 1-2 miesieczne okresy przestoju.(wszystko jest dla nas nowe ;) )</h4>
-    </div>
-    <ul class="timeline">
-        <li class="timeline-inverted">
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">20.10.2017r</h4>
-            </div>
-            <div class="timeline-body">
-              <p> - Powstanie rejstracji oraz logowania</p>
-			</div>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Coś z akcją</h4>
-            </div>
-            <div class="timeline-body">
-              <p>akcja</p>
-              <hr>
-              <div class="btn-group">
-                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                  <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">09.10.2017r</h4>
-            </div>
-            <div class="timeline-body">
-              <p> - Strona responsywna (dopasowuje się do powiększenia) oraz poprawnie dzialajaca na urzadzeniach mobilnych</p>
-            </div>
-          </div>
-        </li>
-        <li class="timeline-inverted">
-          <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">01.09.2017r</h4>
-            </div>
-            <div class="timeline-body">
-              <p> - Start Projektu</p> 
-			</div>
-          </div>
-        </li>
-    </ul>
-</div>
+  <canvas id="c"></canvas>
+  kurwa chuj
 </div>
  <!--body/end-->
 
