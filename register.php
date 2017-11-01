@@ -49,12 +49,17 @@ if(isset($_POST['btn-signup'])) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Login & Registration System</title>
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen"> 
-<link rel="stylesheet" href="style.css" type="text/css" />
-
+<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script><!--login-->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js">
+	</script><!--login-->
 </head>
 <body>
 
@@ -100,6 +105,65 @@ if(isset($_POST['btn-signup'])) {
     </div>
     
 </div>
+
+<!--DO PODMIANY DLA STACHA-->
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Register</legend>
+
+<!-- Prepended text-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="prependedtext"></label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">Login</span>
+      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="Your username" type="text" required="">
+    </div>
+    <p class="help-block">Your nickname show in game and our site.</p>
+  </div>
+</div>
+
+<!-- Prepended text-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password"></label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">Password</span>
+      <input id="password" name="password" class="form-control" placeholder="Your password" type="text" required="">
+    </div>
+    <p class="help-block">The password must be at least 8 characters long and must contain at least one digit, one letter and one nonalphanumeric character.</p>
+  </div>
+</div>
+
+<!-- Prepended text-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email"></label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">Email</span>
+      <input id="email" name="email" class="form-control" placeholder="Your email" type="text" required="">
+    </div>
+    <p class="help-block">example@example.net</p>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="register"></label>
+  <div class="col-md-4">
+    <button id="register" name="register" class="btn btn-primary">Register</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+<!--DO PODMIANY DLA STACHA-->
+
+
+
 
 </body>
 </html>
