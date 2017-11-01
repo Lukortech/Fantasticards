@@ -1,8 +1,10 @@
-
 <?php
-require_once 'log.php';
-require_once 'styl.php';
 
+require_once 'log.php';
+?>
+<?php
+
+require_once 'styl.php';
 ?>
 <!DOCTYPE html>
 <html lang="pl">

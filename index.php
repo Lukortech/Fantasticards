@@ -1,7 +1,9 @@
+<?php
 
+require_once 'log.php';
 ?>
 <?php
-require_once 'log.php';
+
 require_once 'styl.php';
 ?>
 <!--NAVBAR/end-->
