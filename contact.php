@@ -1,37 +1,6 @@
-<?php
-session_start();
-require_once 'dbconnect.php';
-mysqli_set_charset( $DBcon, 'utf8_polish_ci');
-if (isset($_SESSION['userSession'])!="") {
-	header("Location: /clicker/gl.php");
-	exit;
-}
 
-if (isset($_POST['btn-login'])) {
-	
-	$email = strip_tags($_POST['email']);
-	$password = strip_tags($_POST['password']);
-	
-	$email = $DBcon->real_escape_string($email);
-	$password = $DBcon->real_escape_string($password);
-	
-	$query = $DBcon->query("SELECT user_id, email, password FROM tbl_users WHERE email='$email'");
-	$row=$query->fetch_array();
-	
-	$count = $query->num_rows; // if email/password are correct returns must be 1 row
-	
-	if (password_verify($password, $row['password']) && $count==1) {
-		$_SESSION['userSession'] = $row['user_id'];
-		header("Location: /clicker/gl.php");
-	} else {
-		$msg = "<div class='alert alert-danger'>
-					<span class='glyphicon glyphicon-info-sign'></span> &nbsp; Invalid Username or Password !
-				</div>";
-	}
-	$DBcon->close();
-}
-?>
 <?php
+require_once 'log.php';
 require_once 'styl.php';
 ?>
 <!--NAVBAR/end-->
