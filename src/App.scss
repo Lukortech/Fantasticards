@@ -1,0 +1,17 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import './variables';
+
+.top-bar{
+    background: map-get($map: $colors, $key: blue);
+}
+.middle{}
+.bottom-bar{}
+
+.name{}
+.level{}
+.description{}
+.value{}
+.element{}
+.damage{}
+.heal{}
+.effect{}
