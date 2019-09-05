@@ -1,26 +1,46 @@
 // /client/App.js
 import React, { useState } from 'react';
+// import BasicCard from '../../components/BasicCard';
+
+// const card1 = {
+//   name:'Card1',
+//   value:1,
+//   level:1,
+//   element:'wind',
+//   damage:1,
+//   heal:1,
+//   effect:'Slows target by 10%',
+//   description:'This card is no other than other cards',
+//   image_uri:'https://via.placeholder.com/800x600.png'
+// }
+
 // import axios from 'axios';
 
 interface DBProps {
-  data: Array<string>,
+  data: Array<object>,
   id: number,
   message: string | null,
-  intervalIsSet: boolean,
-  idToDelete: boolean | null,
-  idToUpdate: boolean | null,
-  objectToUpdate: boolean | null,
+  // intervalIsSet: boolean,
+  // idToDelete: boolean | null,
+  // idToUpdate: boolean | null,
+  // objectToUpdate: boolean | null,
+  
+  // value: number,
+  // level: number,
+  // damage: number,
+  // heal: number,
+  // name: string,
+  // element: string,
+  // effect: string,
+  // description: string,
+  // image_uri: string
 }
 
 const Database: React.FC = () => {
     let primary_state = {
         data: [],
         id: 0,
-        message: null,
-        intervalIsSet: false,
-        idToDelete: null,
-        idToUpdate: null,
-        objectToUpdate: null,
+        message: null
     };
 
     const [state, setState] = useState<DBProps>(primary_state)
@@ -34,7 +54,7 @@ const Database: React.FC = () => {
   // our first get method that uses our backend api to
   // fetch data from our data base
   const getDataFromDb = () => {
-    fetch('http://localhost:8000/api/getData')
+    fetch('http://localhost:8080/api/getData')
       .then((data) => data.json())
       .then((res) => {
         console.log(res)
@@ -96,17 +116,20 @@ const Database: React.FC = () => {
 //   // see them render into our screen
     return (
       <div>
+        {/* <BasicCard {...card1}/> */}
+
         <button onClick={() => getDataFromDb()}>get data</button>
         <ul>
-          {state.data.length <= 0
-            ? 'NO DB ENTRIES YET'
-            : state.data.map((dat:any) => (
+          {state 
+            ? state.data.map((dat:any) => (
                 <li style={{ padding: '10px' }} key={`state.data.message`}>
                   <span style={{ color: 'gray' }}> id: </span> {dat.id} <br />
                   <span style={{ color: 'gray' }}> data: </span>
-                  {dat.message}
+                  {dat.data}
                 </li>
-              ))}
+              ))
+            : 'NO DB ENTRIES YET'
+            }
         </ul>
         {/* <div style={{ padding: '10px' }}>
           <input
